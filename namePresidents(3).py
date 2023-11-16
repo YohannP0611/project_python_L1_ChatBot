@@ -8,10 +8,12 @@ def list_of_files(directory, extension):
 
 
 def namepresident(files):
+    for i in range(len(files_names)):
+        files_names[i].split('_')
+        
 
 
-
-names = {"Chirac": "Jacques", "Giscard d'Estaing": "Valéry", "Hollande": "François",
+dico_names = {"Chirac": "Jacques", "Giscard d'Estaing": "Valéry", "Hollande": "François",
          "Macron": "Emmanuel", "Mitterrand": "François","Sarkozy": "Nicolas"}
 
 
