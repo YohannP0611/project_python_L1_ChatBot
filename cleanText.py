@@ -1,15 +1,13 @@
 import os
 import shutil
 
-def toLowerCases(files):#take a list with all files path
-    cleanedfiles=[]
-    for file in files:
-        file1 = open(file,'r')
-        cleanedfile =[line[:-1] for line in file1]
-        for elt in file1:
-            if ord(elt)>=ord('A') and ord(elt)<ord('a'):
-                elt.replace(elt,chr(ord(elt)+26))
-    return 
+def toLowerCases(file_path):#take a file
+    file = open(file_path,'r')
+    for elt in file:
+        if ord(elt)>=ord('A') and ord(elt)<ord('a'):
+            elt.replace(elt,chr(ord(elt)+26))
+    file.close()
+    return file
 
 
 
@@ -32,5 +30,12 @@ def addToCleanedSpeeches(file_path):
     except Exception as e:
         print(f"Error: {e}")
 
-def delete_punctation(cleanedfile):
-    pass
+def delete_punctation(file_path):
+    file = open(file_path,'r')
+    for elt in file:
+        if elt=='' or elt=='-':
+            elt = elt.replace(elt,' ')
+        elif ord(elt)>ord(' ') and ord(elt)<ord(0) or ord(elt)>ord(9) and ord(elt)<ord('A'):
+            elt = elt.replace(elt,'')
+    file.close
+    return file
