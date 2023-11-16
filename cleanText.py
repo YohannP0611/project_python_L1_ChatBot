@@ -4,13 +4,11 @@ import shutil
 def toLowerCases(files):#take a list with all files path
     cleanedfiles=[]
     for file in files:
-        file1 = open(file)
+        file1 = open(file,'r')
         cleaned_file = open(file,'a')
-        for elt in file:
+        for elt in file1:
             if ord(elt)>=ord('A') and ord(elt)<ord('a'):
-                elt =chr(ord(elt)+26)
-                cleaned_file.write(elt)
-        cleanedfiles.append(file)
+                elt.replace(elt,chr(ord(elt)+26))
     return cleanedfiles
 
 
