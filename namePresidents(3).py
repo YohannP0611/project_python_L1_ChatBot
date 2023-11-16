@@ -1,6 +1,15 @@
-def namePresident(files):
+def namepresident(files):
     pass
-def firstName(files):
-    pass
-def fullName(files):
+
+
+names = {"Chirac": "Jacques", "Giscard d'Estaing": "Valéry", "Hollande": "François",
+         "Macron": "Emmanuel", "Mitterand": "François"}
+
+
+def firstname(files):
+    lastname = namepresident(files)
+    return names[lastname]
+
+
+def fullname(files):
     pass
