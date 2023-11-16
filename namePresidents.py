@@ -34,7 +34,7 @@ dico_names = {"Chirac": "Jacques", "Giscard d'Estaing": "Valéry", "Hollande": "
 
 def firstname(files):
     lastname = namepresident(files)
-    return names[lastname]
+    return dico_names[lastname]
 
 
 def fullname(files):
