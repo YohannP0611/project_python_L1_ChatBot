@@ -5,11 +5,11 @@ def toLowerCases(files):#take a list with all files path
     cleanedfiles=[]
     for file in files:
         file1 = open(file,'r')
-        cleaned_file = open(file,'a')
+        cleanedfile =[line[:-1] for line in file1]
         for elt in file1:
             if ord(elt)>=ord('A') and ord(elt)<ord('a'):
                 elt.replace(elt,chr(ord(elt)+26))
-    return cleanedfiles
+    return 
 
 
 
