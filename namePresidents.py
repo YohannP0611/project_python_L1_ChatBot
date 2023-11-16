@@ -9,9 +9,8 @@ def list_of_files(directory, extension):
     return files_names
 
 
-def namepresident(files_names):
-    files_names.split('_')
-    files_names_part_2 = files_names[1]
+def name_president(files_names):
+    files_names_part_2 = (files_names.split('_'))[1]
     files_names_short = files_names_part_2[:2]
     if files_names_short == "Ch":
         return "Chirac"
@@ -23,13 +22,15 @@ def namepresident(files_names):
         return "Macron"
     elif files_names_short == "Mi":
         return "Mitterrand"
-
     elif files_names_short == "Sa":
         return "Sarkozy"
 
 
+print(name_president('Nomination_Chirac1.txt'))
+
+
 dico_names = {"Chirac": "Jacques", "Giscard d'Estaing": "Valéry", "Hollande": "François",
-         "Macron": "Emmanuel", "Mitterrand": "François", "Sarkozy": "Nicolas"}
+              "Macron": "Emmanuel", "Mitterrand": "François", "Sarkozy": "Nicolas"}
 
 
 def firstname(files):
@@ -39,4 +40,3 @@ def firstname(files):
 
 def fullname(files):
     pass
-
