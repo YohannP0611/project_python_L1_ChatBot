@@ -13,7 +13,7 @@ def namepresident(files_names):
     files_names.split('_')
     files_names_part_2 = files_names[1]
     files_names_short = files_names_part_2[:2]
-    if filesnames_short == "Ch":
+    if files_names_short == "Ch":
         return "Chirac"
     elif files_names_short == "Gi":
         return "Giscard d'Estaing"
